@@ -4,15 +4,11 @@ from guizero import App, Text, TextBox, PushButton
 from tkinter import Tk
 from tkinter.filedialog import askopenfilenames, askdirectory
 import youtube_dl
+import subprocess as sp
+import time
 #Tk().withdraw()
-
-
-def download():
-    #Text.text = "Button was pressed"
-    ydl_opts = {}
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        ydl.download(['{}'.format(input_box.value)])
-
+'''
+save = ""
 
 def save_dir():
     #Text.text = "Button was pressed"
@@ -20,6 +16,18 @@ def save_dir():
     print(save)
     save_text = Text(app, text="Saving to..." + save )
     button_start = PushButton(app, text="Start Download", command=download)
+
+
+def download():
+    global save
+    #Text.text = "Button was pressed"
+    
+    ydl_opts = {
+    'outtmpl': '{}/%(title)s.%(ext)s'.format(save)
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download(['{}'.format(input_box.value)])
+    
 
 
 app = App(width = 500, height = 200)
@@ -33,9 +41,17 @@ button_dest = PushButton(app, width = 50, text = "Chose Save Location", command=
 app.display()
 
 #output = "C:\\Users\\Office\\Documents\\EGDownloads\\Media"
+'''
+url = input()
+out = sp.getoutput('youtube-dl --get-filename https://www.youtube.com/watch?v=BzUV9BciHe8')
+to = "C:\\Users\\ATUser\\Desktop\\mp3"
+fr = "{}.mp4".format(out)
+os.system('cmd /c "youtube-dl {}'.format(url))
+time.sleep(2)
+os.system('cmd /c "move {} {}'.format(fr, to))
 
 
-
+#print(out)
 
 
 
