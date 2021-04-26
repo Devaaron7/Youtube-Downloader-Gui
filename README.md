@@ -1,5 +1,5 @@
 # Youtube-Downloader-Gui
-Unoffical Gui for Youtube-dl
+Unoffical Gui for Youtube-dl - allows you to download videos from many websites including Youtube
 
 Requires the following Modules -
 
