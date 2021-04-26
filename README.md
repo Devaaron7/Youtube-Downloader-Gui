@@ -9,12 +9,16 @@ optional - I've included a pipfile.lock where you can use pipenv sync to install
 
 Usage -
 
-1. Install the needed Modules
-2. Run Main.py
-3. Paste the page URL for the video you want to download
-4. Select a download location on your computer
-5. Hit "Start Download"
+1. Download the zip folder
+2. Install the needed modules listed (guizero, youtube_dl, pillow)
+3. Run Main.py
+4. Paste the page URL for the video you want to download
+5. Select a download location on your computer
+6. Hit "Start Download"
 
 
 UI screenshots - 
 
+![image](https://user-images.githubusercontent.com/65022882/116165072-0d7f0e80-a6c9-11eb-832c-449faf184cd5.png)
+
+![image](https://user-images.githubusercontent.com/65022882/116165227-6a7ac480-a6c9-11eb-8aea-25bd7cb0580c.png)
