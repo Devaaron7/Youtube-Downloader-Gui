@@ -6,7 +6,7 @@ from tkinter.filedialog import askopenfilenames, askdirectory
 import youtube_dl
 import subprocess as sp
 import time
-#Tk().withdraw()
+
 
 save = ""
 button_start = 0
@@ -19,7 +19,6 @@ def reset():
 
 def save_dir():
     global save, button_start
-    #Text.text = "Button was pressed"
     folder = askdirectory()
     save += folder
     save_text = Text(app, text="Saving to..." + save )
@@ -29,11 +28,6 @@ def save_dir():
 
 def download():
     global button_start
-    #global save
-    #print(save)
-    #input()
-    #Text.text = "Button was pressed"
-    
     ydl_opts = {
     'outtmpl': '{}\%(title)s.%(ext)s'.format(save)
     }
@@ -48,16 +42,10 @@ def download():
 
 
 app = App(width = 500, height = 250)
-
 url_text = Text(app, text="Paste Video URL below")
-
 input_box = TextBox(app, width = 600)
-
 picture = Picture(app, visible=False,  width = 100, height = 100, image="done.gif")
-
 button_dest = PushButton(app, width = 50, text = "Chose Save Location", command=save_dir)
-
-
 app.display()
 
 
@@ -67,7 +55,7 @@ app.display()
 '''
 url = input()
 out = sp.getoutput('youtube-dl --get-filename https://www.youtube.com/watch?v=BzUV9BciHe8')
-to = "C:\\Users\\ATUser\\Desktop\\mp3"
+to = 
 fr = "{}".format(out)
 print(fr)
 os.system('cmd /c "youtube-dl {}'.format(url))
@@ -75,8 +63,3 @@ time.sleep(2)
 os.system('cmd /c "move {} {}'.format(fr, to))
 '''
 ##---------------------------------------------------------------------------------------------
-
-
-
-
-
