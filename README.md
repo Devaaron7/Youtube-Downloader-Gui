@@ -5,7 +5,7 @@ Requires the following Modules -
 
 guizero, youtube_dl, pillow
 
-optional - I've included a pipfile.lock where you can use pipenv sync to install all needed modules at once
+
 
 Usage -
 
